@@ -17,10 +17,32 @@
 
     <main>
       <div class="container">
+        <section class="intro">
+          <h1>Вёрстка и&nbsp;фронтенд любой сложности</h1>
+          <div class="intro__info-wrapper">
+            <div class="intro__icon-wrapper">
+              @@include("source/html/mixins/intro-icon.html")
+            </div>
+            <p>для digital‑агентств, продуктовых компаний и&nbsp;фриланс‑команд</p>
+          </div>
+        </section>
       </div>
     </main>
 
     @@include("source/html/base/footer.html")
+  </div>
+
+  <div class="modal  modal--loader">
+    <div class="modal__wrapper  modal__wrapper--loader">
+      <div class="modal__overlay"></div>
+      <div class="modal__content  modal__content--loader  loader">
+        <a class="loader__logo" aria-label="Переход на главную">
+          @@include("source/html/mixins/loader-logo.html")
+        </a>
+        <p class="loader__call-to-press  loader__call-to-press--press-enter">Нажмите на Enter</p>
+        <p class="loader__call-to-press  loader__call-to-press--click">Кликните на экран</p>
+      </div>
+    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>

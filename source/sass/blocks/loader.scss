@@ -1,0 +1,109 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.loader__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  overflow: hidden;
+
+  @media (max-width: $viewport--md) {
+    align-items: center;
+    width: 550px;
+  }
+}
+
+.loader__logo-liga {
+  @media (max-width: $viewport--md) {
+    display: flex;
+    width: 238px;
+  }
+}
+
+.loader__logo-letter {
+  animation-duration: 2s;
+  animation-name: logoslideleft;
+
+  &--liga-l {
+    margin-right: 7px;
+  }
+
+  &--liga-i {
+    margin-right: 17px;
+  }
+
+  &--liga-a {
+    margin-left: -10px;
+  }
+}
+
+.loader__logo-flag {
+  animation-duration: 1s;
+  animation-name: slidetop;
+  animation-timing-function: ease-in-out;
+
+  @media (max-width: $viewport--md) {
+    width: 51px;
+    height: 68px;
+  }
+}
+
+.loader__logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $viewport--md) {
+    width: 214px;
+  }
+}
+
+.loader__logo-word-wrapper {
+  display: flex;
+
+  &--outsourcing {
+    @media (max-width: $viewport--md) {
+      width: 171px;
+    }
+  }
+}
+
+.loader__logo-word-wrapper--frontend .loader__logo-letter {
+  &:not(:last-child) {
+    margin-right: 9px;
+  }
+}
+
+.loader__logo-word-wrapper--outsourcing .loader__logo-letter {
+  &:not(:last-child) {
+    margin-right: 7px;
+  }
+}
+
+.loader__call-to-press {
+  position: absolute;
+  bottom: 78px;
+  font-family: $font-family--neue-machina;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: $color-default-black;
+
+  &--click {
+    display: none;
+  }
+
+  @media (max-width: $viewport--md) {
+    &--click {
+      display: block;
+    }
+
+    &--press-enter {
+      display: none;
+    }
+  }
+}

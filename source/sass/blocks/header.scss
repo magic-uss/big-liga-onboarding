@@ -1,3 +1,27 @@
 .header {
+  position: absolute;
   display: block;
+  width: 100%;
+
+  @media (max-width: $viewport--md) {
+    z-index: 50;
+    background-color: $color-default-white;
+  }
+}
+
+.header__wrapper {
+  padding: 25px 35px;
+
+  @media (max-width: $viewport--md) {
+    padding: 25px 35px 20px;
+  }
+}
+
+.header__logo {
+  display: block;
+}
+
+.header--animation .header__logo {
+  animation-duration: 1s;
+  animation-name: slideleft;
 }
